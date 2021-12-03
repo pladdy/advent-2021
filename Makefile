@@ -1,0 +1,2 @@
+day-%:
+	go run $@.go
