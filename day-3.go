@@ -8,27 +8,13 @@ import (
 	"strings"
 )
 
-type bitstring struct {
-	bits  []int
-	value int64
-}
-
-func newBitstring(s string) bitstring {
-	bits := []int{}
-	for _, c := range s {
-		if string(c) == "1" {
-			bits = append(bits, 1)
-		} else {
-			bits = append(bits, 0)
-		}
-	}
-
+func bitStringToInt(s string) int64 {
 	value, err := strconv.ParseInt(s, 2, 64)
 	if err != nil {
 		panic(err)
 	}
 
-	return bitstring{bits, value}
+	return value
 }
 
 func part1() {
@@ -75,9 +61,9 @@ func part1() {
 		}
 	}
 
-	gamma_rate := newBitstring(gamma_string.String())
-	epsilon_rate := newBitstring(epsilon_string.String())
-	fmt.Println("Part 1:", gamma_rate.value*epsilon_rate.value)
+	gamma_rate := bitStringToInt(gamma_string.String())
+	epsilon_rate := bitStringToInt(epsilon_string.String())
+	fmt.Println("Part 1:", gamma_rate*epsilon_rate)
 }
 
 func part2() {
