@@ -9,7 +9,7 @@ import (
 )
 
 func part1() {
-	file, err := os.Open("day-2-puzzle.txt")
+	file, err := os.Open("day-2/day-2-puzzle.txt")
 	if err != nil {
 		panic(err)
 	}
@@ -47,7 +47,7 @@ func part1() {
 }
 
 func part2() {
-	file, err := os.Open("day-2-puzzle.txt")
+	file, err := os.Open("day-2/day-2-puzzle.txt")
 	if err != nil {
 		panic(err)
 	}

@@ -1,5 +1,5 @@
 day-%.go:
 	cp day-template.go $@
 
-day-%:
-	go run $@.go
+run-%:
+	go run day-$*/day-$*.go

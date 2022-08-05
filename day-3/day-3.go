@@ -18,7 +18,7 @@ func bitStringToInt(s string) int64 {
 }
 
 func part1() {
-	file, err := os.Open("day-3-puzzle.txt")
+	file, err := os.Open("day-3/day-3-puzzle.txt")
 	if err != nil {
 		panic(err)
 	}
